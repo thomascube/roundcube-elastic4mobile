@@ -4,6 +4,11 @@ Roundcube Plugin to enforce the elastic skin if a mobile device is detected as c
 
 Download and install via https://plugins.roundcube.net
 
+## Important Note
+
+The plugin MUST be put first on the plugins list otherwise the skin will be set too late
+during the initilization phase and other plugins will use the system/user skin instead.
+
 ## License
 
 This program is free software: you can redistribute it and/or modify

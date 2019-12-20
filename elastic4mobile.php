@@ -11,7 +11,6 @@
 class elastic4mobile extends rcube_plugin
 {
     public $noajax = true;
-    public $task = '?(?!logout).*';
 
     public function init()
     {
@@ -20,8 +19,8 @@ class elastic4mobile extends rcube_plugin
 
         if ($detect->isMobile() || $detect->isTablet()) {
           $skin = 'elastic';
+          $rcmail->default_skin = $skin;
           $rcmail->config->set('skin', $skin);
-          $rcmail->output->set_env('skin', $skin);
           $rcmail->output->set_skin($skin);
 
           // disable skin switch as this wouldn't have any effect
